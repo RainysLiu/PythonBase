@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>计算器</title>
+<meta charset="utf-8">
+<script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
+<script type="text/javascript">
+        $(function(){
+              $("#but").click(function(){
+              	var a=parseInt($("#a").val());
+              	var b=parseInt($("#b").val());
+              	$("#c").val(a+b);
+                });
+      });
+</script>
+</head>
+<body>
+	数字1：<input id="a" type="text" name="username" placeholder="再次输入数字" />
+	<br/> <br/>
+	数字2：<input id="b" type="text" name="pwd" placeholder="自此输入数字">  
+	<br/> <br/>
+	<input id="but" type="button" value="="/><br/><br/>
+	和：<input id="c" type="text" name="pwd" placeholder="此处显示结果 "> 
+	<br/> <br/>
+</body>
+</html>

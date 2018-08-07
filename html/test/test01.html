@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>donghuatest</title>
+        <style type="text/css">
+        	.highlight{
+        		background-color: yellow;
+        	}
+        </style>
+        <script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
+        <script type="text/javascript">
+        	$(function(){
+        		$("tbody tr").click(function(){
+        			$(this).addClass("highlight").siblings().removeClass("highlight").end().find("input:radio").prop("chicked",true)
+        		});
+        	});       
+        </script>
+</head>
+
+<body>
+<table border="1">
+    <thead>
+        <tr>
+           <th>状态</th>
+           <th>学号</th>
+           <th>姓名</th>
+           <th>性别</th>
+           <th>成绩</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+           <td><input type="radio" name="state"></td>
+           <td>1</td>
+           <td>令狐冲</td>
+           <td>男</td>
+           <td>91.5</td>
+        </tr>
+        <tr>	
+        	<td><input type="radio" name="state"></td>
+           <td>2</td>
+           <td>郭靖</td>
+           <td>男</td>
+           <td>81.5</td>
+        </tr>
+        <tr>
+        	<td><input type="radio" name="state"></td>
+           <td>3</td>
+           <td>黄蓉</td>
+           <td>女</td>
+           <td>82</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
+
+
+

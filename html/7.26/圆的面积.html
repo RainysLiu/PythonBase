@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>圆的面积</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+  function Disresult()
+  {
+    var r=document.getElementById("re");
+    var re=r.value;
+    var squre=2*(Math.pow(re,2))*(Math.PI);
+    var s=document.getElementById("sq");
+    s.value=squre;
+  }
+</script>
+</head>
+<body>
+  半径：<input id="re" type="text" name="re" placeholder="在此输入圆的半径" />
+  <br/> <br/>
+  <input type="button" onclick="Disresult()" value="求圆的面积"/><br/><br/>
+  圆的面积：<input id="sq" type="txt" name="squre" placeholder="在此顯示圆的面積"/>  
+  <br/> <br/>
+  
+
+</body>
+</html>

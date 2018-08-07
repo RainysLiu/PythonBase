@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>复选框操作</title>
+	<script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+	    $(function(){
+	    	$("#all").click(function(){
+	    		if($(this).prop("checked")){
+	    		$("input[name=hobby]").prop("checked",true);
+	    		alert("全选成功！")
+	    	    }
+	    	    else{    	    	
+	    		$("input[name=hobby]").prop("checked",false);
+	    		  alert("已取消全选！")
+	    	    	}
+	    	})
+	    	$("#revall").click(function(){
+	    		if($(this).prop("checked")){
+	    		    $("input[name=hobby]").each(function(){
+                	$(this).prop("checked",!$(this).prop("checked"));
+	    			})
+	    		alert("反选成功！");
+	    		}
+	    		else{
+	    		$("input[name=hobby]").each(function(){
+                	$(this).prop("checked",!$(this).prop("checked")); 
+	    			})
+	    		alert("已取消反选！");
+	    		}
+	    	})   	
+	 })
+	</script>
+</head>
+<body>
+	电影 <input type="checkbox" name="hobby" value="movie"/> &nbsp;&nbsp;
+	音乐 <input type="checkbox" name="hobby" value="music"/> &nbsp;&nbsp;
+	美食 <input type="checkbox" name="hobby" value="food"/> &nbsp;&nbsp;
+	运动 <input type="checkbox" name="hobby" value="sport"/> &nbsp;&nbsp;
+	读书 <input type="checkbox" name="hobby" value="read"/> &nbsp;&nbsp; <br/>
+	全选 <input type="checkbox" name="all"  id="all"/>&nbsp;&nbsp;
+	反选 <input type="checkbox" name="revall" id="revall" />
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>按時閒問好</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+  function hello()
+  {
+    var date=new Date();
+    h=date.getHours();
+    if (h<12)
+    {
+      alert("早上好！");
+    }
+    else if (h<18)
+    {
+      alert("中午好！");
+    }
+    else
+    {
+      alert("下午好！");
+    }
+  }
+  window.onload=function()
+  {
+    hello();
+  }
+</script>
+</head>
+<body>  
+
+</body>
+</html>

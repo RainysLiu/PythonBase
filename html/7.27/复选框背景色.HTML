@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>属性选择器</title>
+	<script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+	    $(function(){
+             // $("input[type=checkbox]").attr("checked",true);
+             $("input[type=checkbox]").wrap("<span></span>").parent().css("background-color","yellow");
+	    });
+	</script>
+</head>
+<body>
+爱好：运动：<input type="checkbox" name="hobby" value="sport"/> &nbsp;&nbsp;  
+              读书：<input type="checkbox" name="hobby" value="reading"/> &nbsp;&nbsp; 
+              音乐：<input type="checkbox" name="hobby" value="music"/> &nbsp;&nbsp; 
+              电影：<input type="checkbox" name="hobby" value="movie"/> &nbsp;&nbsp; 
+              美食：<input type="checkbox" name="hobby" value="food"/> &nbsp;&nbsp; 
+</html>

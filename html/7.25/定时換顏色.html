@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定時換顏色</title>
+	<style type="text/css">
+		div{
+			height: 300px;
+			width: 300px;
+			background-color: yellow;
+		}
+	</style>
+	<script type="text/javascript">
+	    function autochange()
+	    {
+	    	var d1=document.getElementById("d1");
+	        var array=[0,1,2,3,4,5,6,7,8,9,"a","b","c","d","e","f"];
+	        var clour="#";
+	        for(var i=0;i<6;i++)
+	        {
+	        	var index=Math.round(Math.random()*15);
+	        	clour+=array[index]
+	        }
+	        d1.style.backgroundColor=clour;	
+	    }
+	    window.onload=function()
+	    	{
+	    		setInterval("autochange()",100);   // 每隔定时调用showTime()函数
+			}
+	</script>
+</head>
+<body>
+	<div id="d1"></div>
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery对象与DOM对象互转</title>
+	<script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+        $(function(){
+            var flag=0;
+             $("#mydiv").click(function(){
+                if (flag==0){
+                  $("#mydiv").css({
+                    "background-color":"red"
+                  });
+                  flag=1;
+                }
+                else if (flag==1){
+                    $("#mydiv").css({
+                    "background-color":"yellow" 
+                  });
+                    flag=0;
+                }
+             });
+            })
+	</script>                     
+</head>
+<body>
+	<div id="mydiv" style="height: 500px;width: 500px;background-color: yellow"></div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p>三级联动效果（纯JS实现）</p>
+<div>
+    专业方向： <select name="sel1" id="sel1">
+    <option>--请选择专业--</option>
+    <option>JAVA</option><option>PHP</option><option>UI</option>
+    </select>
+</div>
+<div>
+    班级名称： <select name="sel2" id="sel2">
+   <option>--请选择班级--</option>
+</select>
+</div>
+<div>
+    学生姓名： <select name="sel3" id="sel3">
+    <option>--请选择学生--</option>
+</select>
+</div>
+<p>
+    您选择的内容是：  <span id="sptext"></span>
+</p>
+
+
+<script>
+    var myclass = [
+           [['JAVA班级01'],['JAVA班级02'],['JAVA班级03']],
+            [['PHP班级01'],['PHP班级02'],['PHP班级03']],
+            [['UI班级01'],['UI班级02'],['UI班级03']]
+    ];
+    var mystudy= [
+       [ //第一维代表专业 ， 第二维代表该专业的班级 ，第三维代表该班级的学生
+           [['JAVA班级01学生01'],['JAVA班级01学生02'],['JAVA班级01学生03'],['JAVA班级01学生04']],
+           [['JAVA班级02学生01'],['JAVA班级02学生02'],['JAVA班级02学生03'],['JAVA班级02学生04']],
+           [['JAVA班级03学生01'],['JAVA班级03学生02'],['JAVA班级03学生03'],['JAVA班级03学生04']]
+       ],
+       [
+           [['PHP班级01学生01'],['PHP班级01学生02'],['PHP班级01学生03'],['PHP班级01学生04']],
+           [['PHP班级02学生01'],['PHP班级02学生02'],['PHP班级02学生03'],['PHP班级02学生04']],
+           [['PHP班级03学生01'],['PHP班级03学生02'],['PHP班级03学生03'],['PHP班级03学生04']]
+       ],
+        [
+            [['UI班级01学生01'],['UI班级01学生02'],['UI班级01学生03'],['UI班级01学生04']],
+            [['UI班级02学生01'],['UI班级02学生02'],['UI班级02学生03'],['UI班级02学生04']],
+            [['UI班级03学生01'],['UI班级03学生02'],['UI班级03学生03'],['UI班级03学生04']]
+        ]
+    ];
+document.getElementById("sel1").onchange = function(){
+    //获取选择的选项的索引值（从1开始的，没有返回-1）
+    var selectNum =  this.selectedIndex;
+    //清空原来的选项
+    document.getElementById("sel2").length=1;
+    document.getElementById("sel3").length=1;
+    //循环添加子节点
+
+    for(var i=0;i<myclass[selectNum-1].length;i++){
+
+        //创建元素节点
+
+        var node =document.createElement("OPTION");
+
+        //创建文本节点
+
+        var text = document.createTextNode(myclass[selectNum-1][i]);
+
+         node.appendChild(text);
+
+        document.getElementById("sel2").appendChild(node);
+
+    }
+
+};
+
+    document.getElementById("sel2").onchange = function(){
+
+        document.getElementById("sel3").length=1;
+
+        var selectStudentNum =  this.selectedIndex;
+
+        var selectClassNum = document.getElementById("sel1").selectedIndex;
+
+        for(var i=0;i<mystudy[selectClassNum-1][selectStudentNum-1].length;i++){
+
+            var node =document.createElement("OPTION");
+
+            var text = document.createTextNode(mystudy[selectClassNum-1][selectStudentNum-1][i]);
+
+            node.appendChild(text);
+
+            document.getElementById("sel3").appendChild(node);
+
+        }
+
+    }
+
+</script>
+
+</body>
+
+</html>

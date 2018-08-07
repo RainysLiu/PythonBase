@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>输入框</title>
+	<script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+	    $(function(){
+	    	$("input#search").keyup(function(){
+	    	 $("#context").html($(this).val())
+	    	});
+	    })
+	</script>
+</head>
+<body>
+    输入文本：<input type="text" placeholder="请输入文本" id="search"/>
+    <div id="context" style="height: 500px;width: 500px;border:1px  solid black"></div>
+</body>
+</html>
