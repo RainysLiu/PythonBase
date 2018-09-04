@@ -431,7 +431,7 @@ b=a
 a=3
 print(a,id(a))
 print(b,id(b))
-
+'''
 #赋值、浅拷贝和深拷贝
 import copy
 l1=[1,2,4,5,6,[1,2,3]]
@@ -447,6 +447,8 @@ print(l2,id(l2))
 print(l3,id(l3))
 print(l4,id(l4))
 
+
+'''
 #汉字可做变量
 薛長安 = 99
 賀磊磊 = 100
@@ -527,6 +529,7 @@ a='25'
 print(id(a))
 print((a).isdigit)
 '''
+'''
 s='sss sss jbgvg hvgb'
 s=s.replace(' ','%20')
 print(s)
@@ -535,3 +538,4 @@ class Solution:
        print(s.replace(' ','%20'))
 s=Solution()
 s.replaceSpace('hello python fdf dfd ')
+'''
