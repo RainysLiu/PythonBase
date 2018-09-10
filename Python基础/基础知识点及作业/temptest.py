@@ -433,6 +433,7 @@ print(a,id(a))
 print(b,id(b))
 '''
 #赋值、浅拷贝和深拷贝
+'''
 import copy
 l1=[1,2,4,5,6,[1,2,3]]
 print(l1,id(l1))
@@ -446,7 +447,7 @@ print(l1,id(l1))
 print(l2,id(l2))
 print(l3,id(l3))
 print(l4,id(l4))
-
+'''
 
 '''
 #汉字可做变量
@@ -539,3 +540,21 @@ class Solution:
 s=Solution()
 s.replaceSpace('hello python fdf dfd ')
 '''
+
+
+
+def reverseJu(n):
+    for x in range(1,n+1):
+        if x%2==1:
+            for y in range((x-1)*n+1,x*n+1):
+                print(y,end=' ')
+            print('\n',end='')
+        if x%2==0:
+            l =[]
+            for y in range((x-1)*n+1,x*n+1):
+                l.append(y)
+            l.reverse()
+            for s in l:
+                print(s,end=' ')
+            print('\n', end='')
+reverseJu(5)
