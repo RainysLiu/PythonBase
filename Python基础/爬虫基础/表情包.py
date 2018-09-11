@@ -12,7 +12,7 @@ for m in range(0, 10):
 
     html = requests.get(url, headers=header)
 
-    # 解决乱码问题
+
 
     html.encoding = 'utf-8'
 

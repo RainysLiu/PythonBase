@@ -67,3 +67,5 @@ def xijulist():
         xijulist=pickle.load(f)
     print(xijulist)
 xijulist()
+
+
