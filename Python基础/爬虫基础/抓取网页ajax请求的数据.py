@@ -1,10 +1,8 @@
 import urllib.request
-import ssl
 import json
 import os
 import pickle
 import requests
-from PIL import Image
 def ajaxcrawler(url):
     header={
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
