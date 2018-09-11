@@ -56,7 +56,7 @@ root.geometry('600x300')
 #窗口的初始位置
 root.geometry('+400+300')
 #标签的控件
-label = Label(root,text = '请输入您的芳名',font = ('微软雅黑',14),)
+label = Label(root,text = '请输入名字',font = ('微软雅黑',14),)
 #将标签放在窗口
 label.grid(row = 0,column = 0)
 #输入框
