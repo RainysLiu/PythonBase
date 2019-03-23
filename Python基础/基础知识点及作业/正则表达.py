@@ -1,5 +1,9 @@
 
+
+'''
 import re
+
+
 
 phone = "2004-959-559 # 这是一个电话号码"
 
@@ -10,6 +14,7 @@ print("电话号码 : ", num)
 # 移除非数字的内容
 num = re.sub(r'\D', "", phone)
 print("电话号码 : ", num)
+'''
 
 
 #电话号码判断
@@ -29,12 +34,13 @@ def checkMobile(strData):
         print('%s是中国电信号码'%strData)
     else:
         print('这不是一个手机号码')
-checkMobile('18114090465')
+checkMobile('18392146040')
 
 
 
 #正则表达
 #match只能匹配开头
+"""
 import re
 a=re.match(r'^\d{10}$','1203145647')
 print(a)
@@ -52,3 +58,5 @@ print(a)
 print(re.findall(r'\d{10}','123456789'))
 print(re.findall(r'[2-5]{2}','123456789'))
 print(re.findall(r'[a-zA-Z]{10}','JhHjhKJhJKJjhGhjHgghJHjklJkjhKJ'))
+
+"""

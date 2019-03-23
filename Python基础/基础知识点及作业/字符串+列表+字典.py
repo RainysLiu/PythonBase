@@ -256,6 +256,8 @@ for x in range(len(n)):
             n[y],n[y-1]=n[y-1],n[y]
 print(n)
 
+
+
 #插入排序
 s=[9,4,6,2,1,7,8,6,3,4,2,1]
 for x in range(1,len(n)):

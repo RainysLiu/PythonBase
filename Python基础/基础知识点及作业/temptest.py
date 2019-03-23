@@ -52,6 +52,7 @@ if type(a)==int:
     print('比好')
 print(ord('z'))
 '''
+import random
 
 '''
 from PIL import Image
@@ -491,6 +492,9 @@ print(list(set([1,1,2,2,3,4,4,6,6,5,5,7,7,8,9,9,])))
 '''
 
 #设计实现遍历目录与子目录,抓取.pyc 文件
+
+
+
 '''
 import os
 filenumber=0
@@ -525,11 +529,13 @@ def jia():
     return a
 print(jia())
 #檢測下面函數功能
-
 a='25'
 print(id(a))
 print((a).isdigit)
 '''
+
+
+
 '''
 s='sss sss jbgvg hvgb'
 s=s.replace(' ','%20')
@@ -542,7 +548,7 @@ s.replaceSpace('hello python fdf dfd ')
 '''
 
 
-
+'''
 def reverseJu(n):
     for x in range(1,n+1):
         if x%2==1:
@@ -558,3 +564,13 @@ def reverseJu(n):
                 print(s,end=' ')
             print('\n', end='')
 reverseJu(5)
+'''
+
+
+for house in range(1,500):
+    print(list(range(1, 14)))
+    faclist = random.sample(list(range(1, 14)), 5)
+    print(faclist)
+    house_facility = None
+
+

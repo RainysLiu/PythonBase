@@ -17,7 +17,7 @@ import socket
 while True:
     str=input('请输入：')
     udp = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    udp.connect(("10.35.161.35",8000))
+    udp.connect(("192.168.17.1",8000))
     udp.send(('客户端：'+str).encode('gbk'))
-    time.sleep(0.5)
+    time.sleep(10)
     print(udp.recv(1024).decode('gbk'))
